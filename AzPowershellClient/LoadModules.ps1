@@ -9,7 +9,7 @@ $scriptDir = Split-Path $script:MyInvocation.MyCommand.Path
 Write-Host "directory: $scriptDir"
 
 $zipName = "AzPackages.zip"
-$url = "https://github.com/a-santamaria/ServiceFabricManagedClustersClients/blob/master/AzPowershellClient/$zipName"
+$url = "https://github.com/a-santamaria/ServiceFabricManagedClustersClients/blob/master/AzPowershellClient/" +  $zipName + "?raw=true"
 $zipPath = Join-Path $scriptDir $zipName
 $packagePath = Join-Path $scriptDir "AzPackages"
 
@@ -26,8 +26,12 @@ if ($DownloadLatest.IsPresent)
     if (Test-Path $packagePath)
     {
         Write-Host "removing old package $packagePath already exists. Using it to load modules"
+        Remove-Item $packagePath -Force -Recurse
     }
-    
+}
+
+elseif (-Not (Test-Path $zipPath))
+{
     Write-Host "downloading from $url to $zipPath"
     Invoke-WebRequest -Uri $url -OutFile $zipPath
 }
