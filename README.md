@@ -1,10 +1,13 @@
-# ServiceFabricManagedClustersClients
-Service Fabric Managed Clusters Clients
+# Service Fabric Managed Clusters Clients
+Azure clients to create and manage ManagedClusters and NodeTypes from the command line.
 
+- [Az Powershell Client](#Az Powershell Client (Az.ServiceFabric))
+- [Azure CLI (az sf)](#Azure CLI (az sf))
 
-## Az Powershell Client
+## Az Powershell Client (Az.ServiceFabric)
 
-This a provisional way of loading Az.ServiceFabric with managed clusters cmdlets. The new oficial module will be published on 9/15/2020
+The updated module with support for managed clusters will be released on 9/15/2020.
+This is a provisional way of loading Az.ServiceFabric with managed clusters cmdlets before the official release is available.
 
 ### Download and load Modules
 
@@ -60,3 +63,8 @@ Delete nodes | [Remove-AzServiceFabricManagedNodeType.md  -NodeName ](https://gi
 Add Vm Cert Secret | [Add-AzServiceFabricManagedNodeTypeVMSecret.md ](https://github.com/a-santamaria/azure-powershell/blob/sf_managedclusters/src/ServiceFabric/ServiceFabric/help/Add-AzServiceFabricManagedNodeTypeVMSecret.md )
 Add Vm Extension | [Add-AzServiceFabricManagedNodeTypeVMExtension.md ](https://github.com/a-santamaria/azure-powershell/blob/sf_managedclusters/src/ServiceFabric/ServiceFabric/help/Add-AzServiceFabricManagedNodeTypeVMExtension.md )
 Delete Vm Extension | [Remove-AzServiceFabricManagedNodeTypeVMExtension.md](https://github.com/a-santamaria/azure-powershell/blob/sf_managedclusters/src/ServiceFabric/ServiceFabric/help/Remove-AzServiceFabricManagedNodeTypeVMExtension.md)
+
+
+## Azure CLI (az sf)
+
+Coming soon. The updated module with support for managed clusters will be release on 09/22/2020.
