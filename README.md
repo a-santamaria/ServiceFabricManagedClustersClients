@@ -1,8 +1,8 @@
 # Service Fabric Managed Clusters Clients
 Azure clients to create and manage ManagedClusters and NodeTypes from the command line.
 
-- [Az Powershell Client](#Az Powershell Client (Az.ServiceFabric))
-- [Azure CLI (az sf)](#Azure CLI (az sf))
+- [Az Powershell Client](#az-powershell-client-azservicefabric)
+- [Azure CLI (az sf)](#azure-cli-az-sf)
 
 ## Az Powershell Client (Az.ServiceFabric)
 
