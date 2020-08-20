@@ -20,16 +20,14 @@ This a provisional way of loading Az.ServiceFabric with managed clusters cmdlets
 
 ### Update with the latest
 
-- Close any powershell session that has loaded the moduels and open a new one
-- Go to sfmcClients folder
-- Tun LoadModules.ps1 with -DownloadLatest
+- Close any powershell session that has loaded the moduels and open a new one, go to sfmcClients folder and run LoadModules.ps1 with -DownloadLatest
 
     ```powershell
     cd sfmcClients
     .\LoadModules.ps1 -DownloadLatest
     ```
 
-### Documentation
+### Documentation and Examples
 
 • CRUD Managed Cluster
 Command	  | Help Document
