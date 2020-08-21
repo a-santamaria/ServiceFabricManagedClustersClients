@@ -15,17 +15,22 @@ $packagePath = Join-Path $scriptDir "AzPackages"
 
 if ($DownloadLatest.IsPresent)
 {
-    
-    if (Test-Path $zipPath)
-    {
-        Write-Host "removing old zip $zipPath"
-        Remove-Item $zipPath -Force
-    }
+    try {
+        if (Test-Path $zipPath)
+        {
+            Write-Host "removing old zip $zipPath"
+            Remove-Item $zipPath -Force -ErrorAction Stop
+        }
 
-    if (Test-Path $packagePath)
-    {
-        Write-Host "removing old package $packagePath already exists. Using it to load modules"
-        Remove-Item $packagePath -Force -Recurse
+        if (Test-Path $packagePath)
+        {
+            Write-Host "removing old package $packagePath already exists. Using it to load modules"
+            Remove-Item $packagePath -Force -Recurse -ErrorAction Stop
+        }
+    }
+    catch {
+        Write-Error "Unable to remove old package. Please close powershell session that has imported the packages and try again in a new session. Exception: ($_.Exception)"
+        return
     }
 }
 
