@@ -18,7 +18,6 @@ if ($DownloadLatest.IsPresent)
     
     if (Test-Path $zipPath)
     {
-        Write-Host "hola"
         Write-Host "removing old zip $zipPath"
         Remove-Item $zipPath -Force
     }
@@ -30,7 +29,7 @@ if ($DownloadLatest.IsPresent)
     }
 }
 
-elseif (-Not (Test-Path $zipPath))
+if (-Not (Test-Path $zipPath))
 {
     Write-Host "downloading from $url to $zipPath"
     Invoke-WebRequest -Uri $url -OutFile $zipPath
