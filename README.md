@@ -6,7 +6,7 @@ Azure clients to create and manage ManagedClusters and NodeTypes from the comman
 
 ## Az Powershell Client (Az.ServiceFabric)
 
-The updated module with support for managed clusters will be released on 9/15/2020.
+The updated module with support for managed clusters will be released on 9/22/2020 [S175](https://github.com/Azure/azure-powershell/milestone/109).
 This is a provisional way of loading Az.ServiceFabric with managed clusters cmdlets before the official release is available.
 
 ### Download and load Modules
@@ -19,6 +19,7 @@ This is a provisional way of loading Az.ServiceFabric with managed clusters cmdl
     Invoke-WebRequest -Uri "https://github.com/a-santamaria/ServiceFabricManagedClustersClients/blob/master/AzPowershellClient/LoadModules.ps1?raw=true" -OutFile LoadModules.ps1
     .\LoadModules.ps1
     ```
+
     LoadModules will download [AzPackages.zip](./AzPowershellClient/AzPackages.zip) to the current folder, then it will extract it and load the modules
 
 ### Update with the latest
